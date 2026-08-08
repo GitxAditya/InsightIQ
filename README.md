@@ -37,3 +37,49 @@ Interactive Dashboards
 Business Insights
    ↓
 Executive Decision Support
+
+# Project Architecture
+
+```text
+                    RAW BUSINESS DATA
+                           │
+                           ▼
+                ┌─────────────────────┐
+                │   Data Preparation  │
+                │ Cleaning & Validation│
+                └──────────┬──────────┘
+                           │
+                           ▼
+                ┌─────────────────────┐
+                │   Excel Data Model  │
+                │    Power Pivot      │
+                └──────────┬──────────┘
+                           │
+                           ▼
+                ┌─────────────────────┐
+                │ DAX Measures & KPIs │
+                └──────────┬──────────┘
+                           │
+                           ▼
+                ┌─────────────────────┐
+                │    PivotTables      │
+                │    PivotCharts      │
+                └──────────┬──────────┘
+                           │
+                           ▼
+             ┌─────────────────────────────┐
+             │      Interactive Dashboards │
+             ├─────────────────────────────┤
+             │ Sales                       │
+             │ Customer                    │
+             │ Product                     │
+             │ Financial                   │
+             │ Inventory                   │
+             │ Executive                   │
+             └─────────────┬───────────────┘
+                           │
+                           ▼
+                  BUSINESS INSIGHTS
+                           │
+                           ▼
+                 MANAGEMENT DECISIONS
